@@ -1,0 +1,45 @@
+// Renders submission/Fasa-one-page.pdf from eval/results/summary.json
+const fs = require("fs"); const path = require("path");
+let pw; try { pw = require("playwright"); } catch { pw = require(process.env.PLAYWRIGHT_PATH || "/opt/npm-tools/node_modules/playwright"); }
+const s = JSON.parse(fs.readFileSync(path.join(__dirname, "../eval/results/summary.json"), "utf8"));
+const pct = (x) => `${Math.round(x * 100)}%`;
+const sym = (r) => r ? `${pct(r.exact_match)} of messages fully right · precision ${r.micro_precision.toFixed(2)} · recall ${r.micro_recall.toFixed(2)}` : "not measured";
+const slip = (o) => o ? `HCT + platelets both right: clean ${o.by_condition.clean.both_ok}/10 · phone photo ${o.by_condition.photo.both_ok}/10 · dim ${o.by_condition.dim.both_ok}/10 · wrong value shown ${o.silent_wrong_hct_or_plt}/30` : "not measured";
+const html = `<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>@page{size:A4;margin:14mm 15mm}body{font-family:'Plus Jakarta Sans',sans-serif;color:#1f2a5a;font-size:10.2pt;line-height:1.42;margin:0}
+h1{font-size:30pt;margin:0;letter-spacing:-.02em}h2{font-size:12pt;margin:11pt 0 3pt}p{margin:0 0 5pt}ul{margin:0;padding-left:14pt}li{margin-bottom:2pt}
+.sub{font-size:12.5pt;font-weight:600;margin:2pt 0 8pt}.muted{color:#4a5585}.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 18pt}
+table{border-collapse:collapse;width:100%;font-size:9.4pt}td{border-bottom:1px solid #dde2ef;padding:3pt 4pt;vertical-align:top}td:first-child{font-weight:600;width:34%}
+.foot{margin-top:9pt;font-size:8.6pt;color:#4a5585}</style></head><body>
+<h1>Fasa</h1><div class="sub">Dengue at home, one day at a time. Rest at home, clinic today, or hospital now, following the Malaysian MOH dengue guideline.</div>
+<p class="muted">Shermaine Yap · DSH Hacks V2 (AI × Healthcare) · Live: dsh-hacks-v2-jade.vercel.app · Code: github.com/ShermaineYap/DSH-Hacks-V2</p>
+<h2>The problem</h2>
+<p>Malaysia has recorded 79,686 dengue cases in 2026 (to 31 Oct). Most patients are sent home. The MOH CPG says the critical phase usually starts after day 3, often as the fever falls; outpatients should be reviewed daily from day 3; and any of 8 warning signs means hospital. Patients go home with a paper monitoring record that has no space for symptoms. The one Malaysian app pilot (DengueAid, n=37) showed limited utility.</p>
+<div class="grid"><div>
+<h2>What Fasa does</h2><ul>
+<li><b>Day clock</b> from the first day of fever, with the critical days 3–7 shaded and the next blood test always shown.</li>
+<li><b>Check-in</b> by tapping or writing in Malay, English or both. Gemini and on-device rules find the CPG warning signs; union merge, so the model can add a sign but never remove one.</li>
+<li><b>Slip reading</b> with Gemini vision. Every value is shown beside its printed text and confirmed by the person, and big jumps are flagged. Tesseract is the offline fallback.</li>
+<li><b>Rules engine</b>: deterministic code transcribed from CPG Tables 2–4, 7.3.1 and Appendix 9, including the Malaysian HCT lines. Every reason cites its table.</li>
+<li><b>Trend charts</b> and a <b>printable handover</b> in the MOH record layout, plus warning signs.</li>
+<li><b>Bahasa Melayu / English</b>, a demo patient, no account; the record stays on the phone.</li></ul></div>
+<div><h2>How it is built</h2>
+<p>Next.js 15 + TypeScript on Vercel. <code>rules.ts</code> decides; <code>lexicon.ts</code> is the offline Malay/English extractor; <code>/api/extract</code> and <code>/api/read-slip</code> call Gemini with JSON schemas at temperature 0 and discover a working Flash model at runtime. Only a message or photo the person chooses goes to Google’s Gemini API; Fasa’s server stores nothing.</p>
+<h2>Measured on held-out data</h2>
+<table>
+<tr><td>Rules engine</td><td>${s.rules.passed}/${s.rules.cases} hand-written CPG cases pass</td></tr>
+<tr><td>Signs from text, on-device</td><td>${sym(s.symptoms.lexicon)}</td></tr>
+<tr><td>Signs from text, Gemini</td><td>${sym(s.symptoms.llm)}</td></tr>
+<tr><td>Signs from text, union (shipped)</td><td>${sym(s.symptoms.union)}</td></tr>
+<tr><td>Slips, on-device OCR</td><td>${slip(s.ocr_on_device)}</td></tr>
+<tr><td>Slips, Gemini vision</td><td>${slip(s.ocr_vision)}</td></tr>
+</table>
+<p class="muted" style="margin-top:4pt;font-size:8.8pt">Text set: ${s.symptoms.n} held-out messages written by a separate agent; rules tuned only on the other half. Slips: 30 mock FBC slips from a different random seed than the tuning set.</p></div></div>
+<h2>Limits and next steps</h2>
+<p>Not tested with patients or clinicians; synthetic test data; adult CPG only; some signs (tender liver, fluid accumulation) cannot be checked at home, so Fasa keeps people going to daily clinic reviews rather than replacing them. Not a medical device. Next: review by Malaysian primary-care doctors, a small usability study, WhatsApp check-ins, and Tamil/Chinese support.</p>
+<div class="foot">Sources: MOH CPG Management of Dengue Infection in Adults, 3rd ed. (2015); outbreak.my (MOH weekly data, 31 Oct 2026); Malay Mail, 6 Jul 2026 (H1 2026 cases +29.1%); IJERPH 2018 (HUSM warning-sign sensitivity 91.2%); Digital Health 2024 (DengueAid pilot).</div>
+</body></html>`;
+fs.writeFileSync(path.join(__dirname, "one-page.html"), html);
+(async () => { const b = await pw.chromium.launch(); const p = await b.newPage(); await p.goto("file://" + path.join(__dirname, "one-page.html")); await p.waitForTimeout(800);
+  await p.pdf({ path: path.join(__dirname, "Fasa-one-page.pdf"), format: "A4", printBackground: true, margin: { top: "14mm", bottom: "14mm", left: "15mm", right: "15mm" } });
+  await b.close(); console.log("pdf ok"); })();
