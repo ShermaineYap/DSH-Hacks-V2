@@ -1,0 +1,42 @@
+{
+ "rules": {
+  "cases": 56,
+  "passed": 56
+ },
+ "symptoms": {
+  "n": 61,
+  "lexicon": {
+   "exact_match": 0.869,
+   "micro_precision": 0.976,
+   "micro_recall": 0.854,
+   "missed_signs": 7,
+   "false_alarms": 1
+  },
+  "llm": null,
+  "union": null
+ },
+ "ocr_on_device": {
+  "n": 30,
+  "hct_and_plt_both_ok": 13,
+  "silent_wrong_hct_or_plt": 3,
+  "by_condition": {
+   "clean": {
+    "n": 10,
+    "both_ok": 10,
+    "silent_wrong": 0
+   },
+   "photo": {
+    "n": 10,
+    "both_ok": 3,
+    "silent_wrong": 0
+   },
+   "dim": {
+    "n": 10,
+    "both_ok": 0,
+    "silent_wrong": 3
+   }
+  },
+  "median_ms": 379
+ },
+ "ocr_vision": null
+}

@@ -1,0 +1,91 @@
+import type { Lang, SignKey, Tier } from "./types";
+
+export const SIGN_LABELS: Record<SignKey, { en: string; ms: string; group: "warning" | "emergency" }> = {
+  abdominal_pain: { en: "Stomach pain", ms: "Sakit perut", group: "warning" },
+  persistent_vomiting: { en: "Vomiting more than 3 times today", ms: "Muntah lebih 3 kali hari ini", group: "warning" },
+  persistent_diarrhoea: { en: "Diarrhoea more than 3 times today", ms: "Cirit-birit lebih 3 kali hari ini", group: "warning" },
+  bleeding: { en: "Any bleeding or red spots", ms: "Pendarahan atau bintik merah", group: "warning" },
+  lethargy: { en: "Very weak, drowsy or confused", ms: "Sangat lemah, mengantuk atau keliru", group: "warning" },
+  poor_oral_intake: { en: "Can't keep fluids down", ms: "Tak boleh minum / air keluar balik", group: "warning" },
+  low_urine: { en: "Passing much less urine", ms: "Kencing jauh berkurang", group: "warning" },
+  breathless: { en: "Hard to breathe", ms: "Sukar bernafas", group: "emergency" },
+  cold_clammy: { en: "Cold, pale or clammy skin", ms: "Kulit sejuk, pucat atau lembap", group: "emergency" },
+  fainting: { en: "Fainted or nearly fainted", ms: "Pengsan atau hampir pengsan", group: "emergency" },
+  seizure: { en: "A fit (seizure)", ms: "Sawan", group: "emergency" },
+};
+
+export const SIGN_ORDER: SignKey[] = [
+  "abdominal_pain", "persistent_vomiting", "bleeding", "lethargy", "poor_oral_intake",
+  "persistent_diarrhoea", "low_urine", "breathless", "cold_clammy", "fainting", "seizure",
+];
+
+export const TIER_TEXT: Record<Tier, { en: string; ms: string; shortEn: string; shortMs: string }> = {
+  emergency: { en: "Call 999 or get to an emergency department now.", ms: "Hubungi 999 atau pergi ke jabatan kecemasan sekarang.", shortEn: "Emergency", shortMs: "Kecemasan" },
+  ed_now: { en: "Go to a hospital emergency department now.", ms: "Pergi ke jabatan kecemasan hospital sekarang.", shortEn: "Hospital now", shortMs: "Hospital sekarang" },
+  clinic_today: { en: "Get checked at a clinic today.", ms: "Dapatkan pemeriksaan di klinik hari ini.", shortEn: "Clinic today", shortMs: "Klinik hari ini" },
+  home: { en: "You can keep resting at home today.", ms: "Anda boleh terus berehat di rumah hari ini.", shortEn: "Home", shortMs: "Rumah" },
+};
+
+const S = {
+  tagline: { en: "Dengue at home, one day at a time", ms: "Denggi di rumah, satu hari demi satu hari" },
+  day: { en: "Day", ms: "Hari" },
+  criticalWindow: { en: "Critical days", ms: "Hari kritikal" },
+  todayIs: { en: "Today is day", ms: "Hari ini hari ke-" },
+  ofIllness: { en: "of your illness", ms: "sakit anda" },
+  why: { en: "Why", ms: "Sebab" },
+  stillNeeded: { en: "Still needed", ms: "Masih diperlukan" },
+  checkIn: { en: "Today's check-in", ms: "Semakan hari ini" },
+  temp: { en: "Temperature (°C)", ms: "Suhu (°C)" },
+  tookParacetamol: { en: "Took paracetamol in the last 6 hours", ms: "Ambil parasetamol dalam 6 jam lepas" },
+  reviewed: { en: "I was seen at a clinic today", ms: "Saya sudah diperiksa di klinik hari ini" },
+  tapSigns: { en: "Tap anything you have today", ms: "Tekan apa-apa yang anda alami hari ini" },
+  emergencySigns: { en: "Emergency signs", ms: "Tanda kecemasan" },
+  describe: { en: "Or describe it in your own words (BM or English)", ms: "Atau terangkan dengan ayat sendiri (BM atau English)" },
+  describePh: { en: "e.g. sakit perut sejak pagi, muntah 4 kali", ms: "cth. sakit perut sejak pagi, muntah 4 kali" },
+  readMessage: { en: "Find signs in my message", ms: "Cari tanda dalam mesej saya" },
+  reading: { en: "Reading…", ms: "Membaca…" },
+  foundSigns: { en: "Found in your message. Check they're right:", ms: "Dijumpai dalam mesej anda. Semak betul atau tidak:" },
+  noSignsFound: { en: "No warning signs found in your message. Tap above if something is missing.", ms: "Tiada tanda amaran dalam mesej anda. Tekan di atas jika ada yang tertinggal." },
+  howMany: { en: "How many times in the last 24 hours?", ms: "Berapa kali dalam 24 jam lepas?" },
+  bloodResult: { en: "Blood test result", ms: "Keputusan ujian darah" },
+  addPhoto: { en: "Take a photo of the slip", ms: "Ambil gambar slip" },
+  typeIt: { en: "Type the numbers", ms: "Taip nombor" },
+  confirmValues: { en: "Check each number against your slip before saving", ms: "Semak setiap nombor dengan slip sebelum simpan" },
+  saveResult: { en: "Save result", ms: "Simpan keputusan" },
+  saveCheckIn: { en: "Save today's check-in", ms: "Simpan semakan hari ini" },
+  saved: { en: "Saved", ms: "Disimpan" },
+  trend: { en: "Blood count trend", ms: "Trend kiraan darah" },
+  record: { en: "Monitoring record", ms: "Rekod pemantauan" },
+  printHandover: { en: "Print handover for your doctor", ms: "Cetak ringkasan untuk doktor" },
+  findHospital: { en: "Find the nearest emergency department", ms: "Cari jabatan kecemasan terdekat" },
+  call999: { en: "Call 999", ms: "Hubungi 999" },
+  findClinic: { en: "Find a clinic open now", ms: "Cari klinik yang dibuka sekarang" },
+  notDiagnosis: {
+    en: "Fasa follows the Malaysian MOH dengue guideline to tell you when to get checked. It does not diagnose and does not replace your doctor. If you feel worse, go to hospital whatever the app says.",
+    ms: "Fasa mengikut garis panduan denggi KKM untuk memberitahu bila perlu diperiksa. Ia tidak mendiagnosis dan tidak menggantikan doktor. Jika anda rasa lebih teruk, pergi ke hospital walau apa pun kata aplikasi ini.",
+  },
+  demoBanner: { en: "You are looking at a demo patient, Aisyah. Tap days 1 to 5 to see how Fasa decides each day.", ms: "Ini pesakit demo, Aisyah. Tekan hari 1 hingga 5 untuk lihat keputusan Fasa setiap hari." },
+  startMine: { en: "Start my own record", ms: "Mula rekod saya" },
+  backToDemo: { en: "Back to demo", ms: "Kembali ke demo" },
+  evidence: { en: "How well it works", ms: "Sejauh mana ia berkesan" },
+  setupTitle: { en: "Set up your record", ms: "Sediakan rekod anda" },
+  feverStart: { en: "First day of fever", ms: "Hari pertama demam" },
+  age: { en: "Age", ms: "Umur" },
+  sex: { en: "Sex", ms: "Jantina" },
+  female: { en: "Female", ms: "Perempuan" },
+  male: { en: "Male", ms: "Lelaki" },
+  pregnant: { en: "Pregnant", ms: "Hamil" },
+  comorbidity: { en: "Long-term illness (diabetes, high blood pressure, heart, kidney, liver, lung)", ms: "Penyakit kronik (kencing manis, darah tinggi, jantung, buah pinggang, hati, paru-paru)" },
+  anticoagulant: { en: "Taking blood thinners (aspirin, warfarin, clopidogrel…)", ms: "Mengambil ubat cair darah (aspirin, warfarin, clopidogrel…)" },
+  livesAlone: { en: "Living alone or far from a clinic", ms: "Tinggal seorang atau jauh dari klinik" },
+  begin: { en: "Start", ms: "Mula" },
+  storedHere: { en: "Everything stays on this phone. Nothing is uploaded except a message or photo you choose to have read.", ms: "Semua data kekal dalam telefon ini. Tiada yang dimuat naik kecuali mesej atau gambar yang anda pilih untuk dibaca." },
+  plausibility: { en: "This is a big change from your last result. Please double-check this number.", ms: "Ini perubahan besar dari keputusan lepas. Sila semak semula nombor ini." },
+  readBy: { en: "Read by", ms: "Dibaca oleh" },
+  onDevice: { en: "on-device reader", ms: "pembaca dalam peranti" },
+  printedAs: { en: "On slip", ms: "Pada slip" },
+  homeCare: { en: "Home care", ms: "Penjagaan di rumah" },
+} as const;
+
+export type StrKey = keyof typeof S;
+export const t = (k: StrKey, lang: Lang) => S[k][lang];
