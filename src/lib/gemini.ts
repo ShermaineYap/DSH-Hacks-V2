@@ -49,7 +49,7 @@ export async function generateJSON(parts: unknown[], schema: unknown, system?: s
     model = await pickModel(key);
     r = await call(model);
   }
-  if (!r.ok) throw new Error(`gemini ${r.status}: ${(await r.text()).slice(0, 200)}`);
+  if (!r.ok) { const body = await r.text(); const lim = body.match(/"quotaId": "([^"]+)"[\s\S]*?"model": "([^"]+)"/); throw new Error(`gemini ${r.status} on ${model}${lim ? ` (${lim[1]})` : ""}: ${body.slice(0, 160)}`); }
   const j = await r.json();
   const text = j?.candidates?.[0]?.content?.parts?.find((p: { text?: string }) => p.text)?.text ?? "{}";
   return { model, ms: Date.now() - t0, data: JSON.parse(text), tokens: j?.usageMetadata?.totalTokenCount ?? null };
