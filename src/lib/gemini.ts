@@ -63,6 +63,11 @@ export async function generateJSON(parts: unknown[], schema: unknown, system?: s
       if (working === model) working = null;
       continue;
     }
+    if (r.status >= 500) {
+      // overloaded / unavailable: try the next model now, but keep this one for later requests
+      if (working === model) working = null;
+      continue;
+    }
     if (r.status === 429 && working === model) {
       // per-minute limit on the model that was working: try the next one this time only
       working = null;
