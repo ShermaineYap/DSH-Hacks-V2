@@ -41,11 +41,11 @@ All of these are on data the tuned component never saw:
 | What | Result |
 |---|---|
 | Guideline rules engine | **56 / 56** hand-written CPG cases pass |
-| Free-text signs, on-device rules only | {{LEX}} |
-| Free-text signs, Gemini alone | {{LLM}} |
-| Free-text signs, union (as shipped) | {{UNION}} |
-| Blood slips, on-device OCR | {{OCR}} |
-| Blood slips, Gemini vision | {{VISION}} |
+| Free-text signs, on-device rules only | 87% of messages fully right · precision 0.98 · recall 0.85 · 7 signs missed · 1 false alarms |
+| Free-text signs, Gemini alone | 93% of messages fully right · precision 0.98 · recall 0.90 · 5 signs missed · 1 false alarms (2 API errors counted as misses) |
+| Free-text signs, union (as shipped) | **97% of messages fully right · precision 0.96 · recall 1.00 · 0 signs missed · 2 false alarms** |
+| Blood slips, on-device OCR | HCT + platelets both right: clean 10/10 · phone photo 3/10 · dim photo 0/10 · wrong value shown 3/30 |
+| Blood slips, Gemini vision | **HCT + platelets both right: clean 10/10 · phone photo 10/10 · dim photo 10/10 · wrong value shown 0/30** |
 
 The symptom test set is 120 Malay/English/mixed messages written and labelled by a separate agent that never saw the extractor. It was split 50/50 with a fixed hash. I tuned the on-device rules on the development half only and scored the held-out half once. The slip test set is 30 mock FBC slips (three layouts, fictional clinics) in clean, phone-photo and dim conditions, generated with a different random seed from the 30 slips I tuned on.
 

@@ -1,0 +1,28 @@
+{
+ "model": "gemini-3.5-flash-lite",
+ "clean": {
+  "n": 10,
+  "both_ok": 10,
+  "silent_wrong": 0,
+  "errors": 0
+ },
+ "photo": {
+  "n": 10,
+  "both_ok": 10,
+  "silent_wrong": 0,
+  "errors": 0
+ },
+ "dim": {
+  "n": 10,
+  "both_ok": 10,
+  "silent_wrong": 0,
+  "errors": 0
+ },
+ "all": {
+  "n": 30,
+  "both_ok": 30,
+  "silent_wrong": 0,
+  "errors": 0
+ },
+ "median_ms": 5220
+}

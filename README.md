@@ -18,8 +18,8 @@ Most Malaysian dengue patients are sent home. The Ministry of Health's dengue gu
 | What | Result | Script |
 |---|---|---|
 | Rules engine | 56/56 CPG cases | `npm test` |
-| Free-text signs (held-out, n={{N}}) | {{SYMROW}} | `scripts/eval-symptoms.ts`, `scripts/eval-live.ts` |
-| Slip reading (held-out, 30 slips) | {{SLIPROW}} | `scripts/eval-ocr.ts`, `scripts/eval-live.ts` |
+| Free-text signs (held-out, n=61) | Union (shipped): 97% fully right, recall 1.00 (0 signs missed), 2 false alarms. On-device only: 87%, recall 0.85 | `scripts/eval-symptoms.ts`, `scripts/eval-live.ts` |
+| Slip reading (held-out, 30 slips) | Gemini vision: HCT + platelets right on 30/30, 0 wrong values. On-device OCR: 13/30, 3 wrong values | `scripts/eval-ocr.ts`, `scripts/eval-live.ts` |
 
 Details, splits and limits are on the [evidence page](https://dsh-hacks-v2-jade.vercel.app/evidence) and in `eval/results/`.
 

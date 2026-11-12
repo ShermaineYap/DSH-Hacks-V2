@@ -6,10 +6,10 @@ const pct = (x) => `${Math.round(x * 100)}%`;
 const sym = (r) => r ? `${pct(r.exact_match)} of messages fully right · precision ${r.micro_precision.toFixed(2)} · recall ${r.micro_recall.toFixed(2)}` : "not measured";
 const slip = (o) => o ? `HCT + platelets both right: clean ${o.by_condition.clean.both_ok}/10 · phone photo ${o.by_condition.photo.both_ok}/10 · dim ${o.by_condition.dim.both_ok}/10 · wrong value shown ${o.silent_wrong_hct_or_plt}/30` : "not measured";
 const html = `<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-<style>@page{size:A4;margin:14mm 15mm}body{font-family:'Plus Jakarta Sans',sans-serif;color:#1f2a5a;font-size:10.2pt;line-height:1.42;margin:0}
-h1{font-size:30pt;margin:0;letter-spacing:-.02em}h2{font-size:12pt;margin:11pt 0 3pt}p{margin:0 0 5pt}ul{margin:0;padding-left:14pt}li{margin-bottom:2pt}
+<style>@page{size:A4;margin:14mm 15mm}body{font-family:'Plus Jakarta Sans',sans-serif;color:#1f2a5a;font-size:9.3pt;line-height:1.36;margin:0}
+h1{font-size:24pt;margin:0;letter-spacing:-.02em}h2{font-size:11pt;margin:8pt 0 2pt}p{margin:0 0 5pt}ul{margin:0;padding-left:14pt}li{margin-bottom:2pt}
 .sub{font-size:12.5pt;font-weight:600;margin:2pt 0 8pt}.muted{color:#4a5585}.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 18pt}
-table{border-collapse:collapse;width:100%;font-size:9.4pt}td{border-bottom:1px solid #dde2ef;padding:3pt 4pt;vertical-align:top}td:first-child{font-weight:600;width:34%}
+table{border-collapse:collapse;width:100%;font-size:8.6pt}td{border-bottom:1px solid #dde2ef;padding:2pt 3pt;vertical-align:top}td:first-child{font-weight:600;width:34%}
 .foot{margin-top:9pt;font-size:8.6pt;color:#4a5585}</style></head><body>
 <h1>Fasa</h1><div class="sub">Dengue at home, one day at a time. Rest at home, clinic today, or hospital now, following the Malaysian MOH dengue guideline.</div>
 <p class="muted">Shermaine Yap · DSH Hacks V2 (AI × Healthcare) · Live: dsh-hacks-v2-jade.vercel.app · Code: github.com/ShermaineYap/DSH-Hacks-V2</p>

@@ -1,0 +1,12 @@
+{
+ "s1": "Malaysia has recorded nearly eighty thousand dengue cases this year. Most patients are sent home from a clinic, with a reminder to come back tomorrow. The dangerous part, the critical phase, usually starts after day three. At home. Often just as the fever comes down.",
+ "s2": "The Ministry of Health guideline asks for a clinic review every day from day three, and lists eight warning signs. But the paper monitoring record has no space for symptoms, and patients can't tell which signs matter. Fasa turns that guideline into a daily companion.",
+ "s3": "Fasa counts the days from the first day of fever, and shades the critical window. This is our demo patient, Aisyah. On days one to four, she can rest at home, and Fasa reminds her that tomorrow's blood test is due, even if she feels better.",
+ "s4": "Each day, she checks in. She can tap symptoms, or just write how she feels, in Malay, English, or both. Gemini picks out the guideline's warning signs, while on-device rules run alongside. The two are combined, so the model can add a sign, but never remove one.",
+ "s5": "For blood results, she photographs the slip. Gemini vision reads the haematocrit and platelets, and shows the printed text beside each number, so she confirms every value before it's saved. Big jumps from yesterday get flagged.",
+ "s6": "On day five, her fever is down. But she has stomach pain and vomiting, and her haematocrit has crossed the Malaysian threshold while platelets fall. Fasa says: go to a hospital emergency department, now. And it shows exactly which guideline rule triggered.",
+ "s7": "One tap prints a handover in the layout of the ministry's own monitoring record, plus the warning signs the paper form leaves out. And the whole app works in Bahasa Melayu.",
+ "s9": "Under the hood, it's a Next.js app on Vercel. The decision is deterministic code, transcribed from the guideline and tested case by case. The language model only structures what people write and what the slip shows. And the record stays on the phone.",
+ "s10": "Fasa. Know which day it is, and what to do about it.",
+ "s8": "We measured it on data the tuned parts never saw. All fifty-six guideline test cases pass. On sixty-one held-out messages in Malay and English, the combined extractor missed no warning signs, with two false alarms. And Gemini vision read haematocrit and platelets correctly on all thirty test slips, including dim photos, where on-device text recognition managed none."
+}

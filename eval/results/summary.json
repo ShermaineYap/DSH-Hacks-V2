@@ -12,8 +12,23 @@
    "missed_signs": 7,
    "false_alarms": 1
   },
-  "llm": null,
-  "union": null
+  "llm": {
+   "exact_match": 0.934,
+   "micro_precision": 0.977,
+   "micro_recall": 0.896,
+   "missed_signs": 5,
+   "false_alarms": 1
+  },
+  "union": {
+   "exact_match": 0.967,
+   "micro_precision": 0.96,
+   "micro_recall": 1,
+   "missed_signs": 0,
+   "false_alarms": 2
+  },
+  "llm_median_ms": 4217,
+  "llm_model": "runtime-selected Gemini Flash (gemini-3.6-flash / gemini-3.5-flash-lite)",
+  "llm_failures": 2
  },
  "ocr_on_device": {
   "n": 30,
@@ -38,5 +53,28 @@
   },
   "median_ms": 379
  },
- "ocr_vision": null
+ "ocr_vision": {
+  "n": 30,
+  "hct_and_plt_both_ok": 30,
+  "silent_wrong_hct_or_plt": 0,
+  "by_condition": {
+   "clean": {
+    "n": 10,
+    "both_ok": 10,
+    "silent_wrong": 0
+   },
+   "photo": {
+    "n": 10,
+    "both_ok": 10,
+    "silent_wrong": 0
+   },
+   "dim": {
+    "n": 10,
+    "both_ok": 10,
+    "silent_wrong": 0
+   }
+  },
+  "median_ms": 5220,
+  "model": "gemini-3.5-flash-lite"
+ }
 }

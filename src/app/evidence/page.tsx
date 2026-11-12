@@ -70,7 +70,7 @@ export default function Evidence() {
       </div>
       <p className="mt-2 text-[14px] text-ink-3">
         The tap-to-select symptom list is always shown, so a missed sign in the message can still be entered directly. When a count is missing (“muntah” with no number), Fasa asks how many times instead of guessing.
-        {s.symptoms.llm_model ? ` Model: ${s.symptoms.llm_model}, median ${s.symptoms.llm_median_ms} ms per message.` : ""}
+        {s.symptoms.llm_model ? ` Model: ${s.symptoms.llm_model}, median ${s.symptoms.llm_median_ms} ms per message. “Gemini alone” counts 2 API errors as misses; the shipped union still had the on-device result for those messages.` : ""}
       </p>
 
       <h2 className="mt-10 text-xl font-bold">3. Reading a blood-test slip</h2>
