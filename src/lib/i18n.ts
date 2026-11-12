@@ -79,7 +79,7 @@ const S = {
   anticoagulant: { en: "Taking blood thinners (aspirin, warfarin, clopidogrel…)", ms: "Mengambil ubat cair darah (aspirin, warfarin, clopidogrel…)" },
   livesAlone: { en: "Living alone or far from a clinic", ms: "Tinggal seorang atau jauh dari klinik" },
   begin: { en: "Start", ms: "Mula" },
-  storedHere: { en: "Everything stays on this phone. Nothing is uploaded except a message or photo you choose to have read.", ms: "Semua data kekal dalam telefon ini. Tiada yang dimuat naik kecuali mesej atau gambar yang anda pilih untuk dibaca." },
+  storedHere: { en: "Your record stays on this phone. A message or slip photo you choose to have read is sent to Google’s Gemini API; Fasa’s server stores nothing. Don’t include your name or IC number.", ms: "Rekod anda kekal dalam telefon ini. Mesej atau gambar slip yang anda pilih untuk dibaca dihantar ke API Gemini Google; pelayan Fasa tidak menyimpan apa-apa. Jangan masukkan nama atau nombor IC." },
   plausibility: { en: "This is a big change from your last result. Please double-check this number.", ms: "Ini perubahan besar dari keputusan lepas. Sila semak semula nombor ini." },
   readBy: { en: "Read by", ms: "Dibaca oleh" },
   onDevice: { en: "on-device reader", ms: "pembaca dalam peranti" },
