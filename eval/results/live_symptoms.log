@@ -1,1 +1,29 @@
 LLM FAIL m005 gemini 503 on gemini-3.6-flash
+LLM FAIL m117 gemini 404 on gemini-2.5-flash
+{
+ "n": 61,
+ "model": "gemini-3.5-flash-lite",
+ "llm_failures": 2,
+ "llm_median_ms": 4217,
+ "lexicon": {
+  "exact_match": 0.869,
+  "micro_precision": 0.976,
+  "micro_recall": 0.854,
+  "missed_signs": 7,
+  "false_alarms": 1
+ },
+ "llm": {
+  "exact_match": 0.934,
+  "micro_precision": 0.977,
+  "micro_recall": 0.896,
+  "missed_signs": 5,
+  "false_alarms": 1
+ },
+ "union": {
+  "exact_match": 0.967,
+  "micro_precision": 0.96,
+  "micro_recall": 1,
+  "missed_signs": 0,
+  "false_alarms": 2
+ }
+}

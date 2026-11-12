@@ -1,0 +1,161 @@
+{
+ "n": 61,
+ "model": "gemini-3.5-flash-lite",
+ "llm_failures": 2,
+ "llm_median_ms": 4217,
+ "lexicon": {
+  "exact_match": 0.869,
+  "micro_precision": 0.976,
+  "micro_recall": 0.854,
+  "missed_signs": 7,
+  "false_alarms": 1
+ },
+ "llm": {
+  "exact_match": 0.934,
+  "micro_precision": 0.977,
+  "micro_recall": 0.896,
+  "missed_signs": 5,
+  "false_alarms": 1
+ },
+ "union": {
+  "exact_match": 0.967,
+  "micro_precision": 0.96,
+  "micro_recall": 1,
+  "missed_signs": 0,
+  "false_alarms": 2
+ },
+ "errors": {
+  "lexicon": [
+   {
+    "id": "m009",
+    "text": "ada bintik2 merah kat kaki dan tangan",
+    "gold": [
+     "bleeding"
+    ],
+    "pred": []
+   },
+   {
+    "id": "m010",
+    "text": "x boleh minum air langsung, minum je muntah",
+    "gold": [
+     "poor_oral_intake",
+     "persistent_vomiting"
+    ],
+    "pred": [
+     "poor_oral_intake"
+    ]
+   },
+   {
+    "id": "m021",
+    "text": "muntah x berhenti dari subuh, air pun x masuk",
+    "gold": [
+     "persistent_vomiting",
+     "poor_oral_intake"
+    ],
+    "pred": [
+     "persistent_vomiting"
+    ]
+   },
+   {
+    "id": "m029",
+    "text": "anak sy x nak minum langsung, kencing pun sikit",
+    "gold": [
+     "poor_oral_intake",
+     "low_urine"
+    ],
+    "pred": [
+     "poor_oral_intake"
+    ]
+   },
+   {
+    "id": "m063",
+    "text": "Stomach very pain on the rigth side",
+    "gold": [
+     "abdominal_pain"
+    ],
+    "pred": []
+   },
+   {
+    "id": "m087",
+    "text": "If tummy pain come back I will go hospital",
+    "gold": [],
+    "pred": [
+     "abdominal_pain"
+    ]
+   },
+   {
+    "id": "m102",
+    "text": "My mum x boleh minum, everything she drink keluar balik",
+    "gold": [
+     "poor_oral_intake",
+     "persistent_vomiting"
+    ],
+    "pred": [
+     "poor_oral_intake"
+    ]
+   },
+   {
+    "id": "m113",
+    "text": "urine sikit sgt today, kaler gelap",
+    "gold": [
+     "low_urine"
+    ],
+    "pred": []
+   }
+  ],
+  "llm": [
+   {
+    "id": "m005",
+    "text": "anak saya lemah sangat, x larat bangun dr katil",
+    "gold": [
+     "lethargy"
+    ],
+    "pred": []
+   },
+   {
+    "id": "m018",
+    "text": "ada ruam kat badan, gatal2 sikit",
+    "gold": [],
+    "pred": [
+     "bleeding"
+    ]
+   },
+   {
+    "id": "m111",
+    "text": "Perut pedih, muntah darah sikit, very weak, x larat jalan",
+    "gold": [
+     "abdominal_pain",
+     "bleeding",
+     "lethargy"
+    ],
+    "pred": []
+   },
+   {
+    "id": "m117",
+    "text": "Muntah more than 4 times, can't stop",
+    "gold": [
+     "persistent_vomiting"
+    ],
+    "pred": []
+   }
+  ],
+  "union": [
+   {
+    "id": "m018",
+    "text": "ada ruam kat badan, gatal2 sikit",
+    "gold": [],
+    "pred": [
+     "bleeding"
+    ]
+   },
+   {
+    "id": "m087",
+    "text": "If tummy pain come back I will go hospital",
+    "gold": [],
+    "pred": [
+     "abdominal_pain"
+    ]
+   }
+  ]
+ }
+}
