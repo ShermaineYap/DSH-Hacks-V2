@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { extractLexicon } from "@/lib/lexicon";
 import type { SignKey } from "@/lib/types";
+import { generateJSON } from "@/lib/gemini";
 
 export const runtime = "nodejs";
 
@@ -52,32 +53,17 @@ function limited(ip: string) {
 }
 
 async function callGemini(text: string) {
-  const key = process.env.GEMINI_API_KEY;
-  if (!key) return null;
-  const model = process.env.GEMINI_MODEL || "gemini-2.5-flash";
-  const t0 = Date.now();
-  const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-    method: "POST",
-    headers: { "content-type": "application/json", "x-goog-api-key": key },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: SYSTEM }] },
-      contents: [{ role: "user", parts: [{ text }] }],
-      generationConfig: { temperature: 0, responseMimeType: "application/json", responseSchema: SCHEMA, thinkingConfig: { thinkingBudget: 0 } },
-    }),
-    signal: AbortSignal.timeout(12_000),
-  });
-  if (!r.ok) throw new Error(`gemini ${r.status}`);
-  const j = await r.json();
-  const raw = j?.candidates?.[0]?.content?.parts?.[0]?.text ?? "{}";
-  const parsed = JSON.parse(raw) as { signs?: { key: SignKey; evidence: string }[]; ask?: SignKey[] };
+  const res = await generateJSON([{ text }], SCHEMA, SYSTEM);
+  if (!res) return null;
+  const parsed = res.data as { signs?: { key: SignKey; evidence: string }[]; ask?: SignKey[] };
   const signs = (parsed.signs ?? []).filter((s) => KEYS.includes(s.key));
   return {
-    model,
-    ms: Date.now() - t0,
+    model: res.model,
+    ms: res.ms,
     signs: [...new Set(signs.map((s) => s.key))],
     evidence: Object.fromEntries(signs.map((s) => [s.key, s.evidence])) as Partial<Record<SignKey, string>>,
     ask: (parsed.ask ?? []).filter((k) => KEYS.includes(k)),
-    tokens: j?.usageMetadata?.totalTokenCount ?? null,
+    tokens: res.tokens,
   };
 }
 

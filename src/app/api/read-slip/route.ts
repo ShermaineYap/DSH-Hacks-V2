@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { generateJSON } from "@/lib/gemini";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -53,21 +54,12 @@ export async function POST(req: Request) {
   if (!(file instanceof Blob)) return NextResponse.json({ error: "No image" }, { status: 400 });
   if (file.size > 6_000_000) return NextResponse.json({ error: "Image too large (max 6 MB)" }, { status: 413 });
   const b64 = Buffer.from(await file.arrayBuffer()).toString("base64");
-  const model = process.env.GEMINI_MODEL || "gemini-2.5-flash";
-  const t0 = Date.now();
   try {
-    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-      method: "POST",
-      headers: { "content-type": "application/json", "x-goog-api-key": key },
-      body: JSON.stringify({
-        contents: [{ role: "user", parts: [{ inlineData: { mimeType: file.type || "image/jpeg", data: b64 } }, { text: PROMPT }] }],
-        generationConfig: { temperature: 0, responseMimeType: "application/json", responseSchema: SCHEMA, thinkingConfig: { thinkingBudget: 0 } },
-      }),
-      signal: AbortSignal.timeout(25_000),
-    });
-    if (!r.ok) return NextResponse.json({ error: `Vision model error ${r.status}` }, { status: 502 });
-    const j = await r.json();
-    const raw = JSON.parse(j?.candidates?.[0]?.content?.parts?.[0]?.text ?? "{}") as Record<string, Field | string | null>;
+    const res = await generateJSON([{ inlineData: { mimeType: file.type || "image/jpeg", data: b64 } }, { text: PROMPT }], SCHEMA, undefined, 25_000);
+    if (!res) return NextResponse.json({ error: "Vision reader not configured" }, { status: 503 });
+    const raw = res.data as Record<string, Field | string | null>;
+    const model = res.model;
+    const t0 = Date.now() - res.ms;
     const out: Record<string, unknown> = { model, ms: Date.now() - t0, date: raw.date ?? undefined, printed: {}, lowConfidence: [] };
     for (const k of ["hct", "plt", "hb", "wcc"] as const) {
       const f = raw[k] as Field;
