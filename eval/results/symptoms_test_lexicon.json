@@ -1,0 +1,146 @@
+{
+ "split": "test",
+ "mode": "lexicon",
+ "n": 61,
+ "exact_match": 0.869,
+ "micro_precision": 0.976,
+ "micro_recall": 0.854,
+ "missed_signs": 7,
+ "false_alarms": 1,
+ "per_sign": {
+  "abdominal_pain": {
+   "tp": 2,
+   "fp": 1,
+   "fn": 1
+  },
+  "persistent_vomiting": {
+   "tp": 6,
+   "fp": 0,
+   "fn": 2
+  },
+  "persistent_diarrhoea": {
+   "tp": 1,
+   "fp": 0,
+   "fn": 0
+  },
+  "bleeding": {
+   "tp": 7,
+   "fp": 0,
+   "fn": 1
+  },
+  "lethargy": {
+   "tp": 6,
+   "fp": 0,
+   "fn": 0
+  },
+  "poor_oral_intake": {
+   "tp": 6,
+   "fp": 0,
+   "fn": 1
+  },
+  "low_urine": {
+   "tp": 1,
+   "fp": 0,
+   "fn": 2
+  },
+  "breathless": {
+   "tp": 4,
+   "fp": 0,
+   "fn": 0
+  },
+  "cold_clammy": {
+   "tp": 3,
+   "fp": 0,
+   "fn": 0
+  },
+  "fainting": {
+   "tp": 5,
+   "fp": 0,
+   "fn": 0
+  },
+  "seizure": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 0
+  }
+ },
+ "median_ms": 0,
+ "errors": [
+  {
+   "id": "m009",
+   "text": "ada bintik2 merah kat kaki dan tangan",
+   "gold": [
+    "bleeding"
+   ],
+   "pred": []
+  },
+  {
+   "id": "m010",
+   "text": "x boleh minum air langsung, minum je muntah",
+   "gold": [
+    "poor_oral_intake",
+    "persistent_vomiting"
+   ],
+   "pred": [
+    "poor_oral_intake"
+   ]
+  },
+  {
+   "id": "m021",
+   "text": "muntah x berhenti dari subuh, air pun x masuk",
+   "gold": [
+    "persistent_vomiting",
+    "poor_oral_intake"
+   ],
+   "pred": [
+    "persistent_vomiting"
+   ]
+  },
+  {
+   "id": "m029",
+   "text": "anak sy x nak minum langsung, kencing pun sikit",
+   "gold": [
+    "poor_oral_intake",
+    "low_urine"
+   ],
+   "pred": [
+    "poor_oral_intake"
+   ]
+  },
+  {
+   "id": "m063",
+   "text": "Stomach very pain on the rigth side",
+   "gold": [
+    "abdominal_pain"
+   ],
+   "pred": []
+  },
+  {
+   "id": "m087",
+   "text": "If tummy pain come back I will go hospital",
+   "gold": [],
+   "pred": [
+    "abdominal_pain"
+   ]
+  },
+  {
+   "id": "m102",
+   "text": "My mum x boleh minum, everything she drink keluar balik",
+   "gold": [
+    "poor_oral_intake",
+    "persistent_vomiting"
+   ],
+   "pred": [
+    "poor_oral_intake"
+   ]
+  },
+  {
+   "id": "m113",
+   "text": "urine sikit sgt today, kaler gelap",
+   "gold": [
+    "low_urine"
+   ],
+   "pred": []
+  }
+ ]
+}

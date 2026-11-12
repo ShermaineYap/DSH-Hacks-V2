@@ -1,0 +1,887 @@
+[
+ {
+  "id": "m001",
+  "lang": "ms",
+  "text": "Demam lagi hari ni, kepala sakit sikit",
+  "labels": []
+ },
+ {
+  "id": "m002",
+  "lang": "ms",
+  "text": "sakit perut sgt pagi ni, muntah 4 kali dah sejak semalam",
+  "labels": [
+   "abdominal_pain",
+   "persistent_vomiting"
+  ]
+ },
+ {
+  "id": "m003",
+  "lang": "ms",
+  "text": "muntah 3 kali je hari ni, perut ok",
+  "labels": []
+ },
+ {
+  "id": "m004",
+  "lang": "ms",
+  "text": "Gusi berdarah masa gosok gigi tadi",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m005",
+  "lang": "ms",
+  "text": "anak saya lemah sangat, x larat bangun dr katil",
+  "labels": [
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m006",
+  "lang": "ms",
+  "text": "tak muntah dah hari ni, alhamdulillah",
+  "labels": []
+ },
+ {
+  "id": "m007",
+  "lang": "ms",
+  "text": "berak cair 2x pagi tadi, lain ok",
+  "labels": []
+ },
+ {
+  "id": "m008",
+  "lang": "ms",
+  "text": "cirit birit 5 kali dah dari pagi",
+  "labels": [
+   "persistent_diarrhoea"
+  ]
+ },
+ {
+  "id": "m009",
+  "lang": "ms",
+  "text": "ada bintik2 merah kat kaki dan tangan",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m010",
+  "lang": "ms",
+  "text": "x boleh minum air langsung, minum je muntah",
+  "labels": [
+   "poor_oral_intake",
+   "persistent_vomiting"
+  ]
+ },
+ {
+  "id": "m011",
+  "lang": "ms",
+  "text": "Dah dari semalam tak kencing, risau",
+  "labels": [
+   "low_urine"
+  ]
+ },
+ {
+  "id": "m012",
+  "lang": "ms",
+  "text": "Susah nak bernafas, dada rasa ketat",
+  "labels": [
+   "breathless"
+  ]
+ },
+ {
+  "id": "m013",
+  "lang": "ms",
+  "text": "Tangan dan kaki sejuk, badan berpeluh sejuk",
+  "labels": [
+   "cold_clammy"
+  ]
+ },
+ {
+  "id": "m014",
+  "lang": "ms",
+  "text": "tadi pitam masa bangun dari katil",
+  "labels": [
+   "fainting"
+  ]
+ },
+ {
+  "id": "m015",
+  "lang": "ms",
+  "text": "anak saya sawan tadi, badan kejang2",
+  "labels": [
+   "seizure"
+  ]
+ },
+ {
+  "id": "m016",
+  "lang": "ms",
+  "text": "demam dah turun, rasa lebih baik hari ni",
+  "labels": []
+ },
+ {
+  "id": "m017",
+  "lang": "ms",
+  "text": "sakit sendi dgn sakit belakang mata, demam 39",
+  "labels": []
+ },
+ {
+  "id": "m018",
+  "lang": "ms",
+  "text": "ada ruam kat badan, gatal2 sikit",
+  "labels": []
+ },
+ {
+  "id": "m019",
+  "lang": "ms",
+  "text": "takde gusi berdarah, takde hidung berdarah",
+  "labels": []
+ },
+ {
+  "id": "m020",
+  "lang": "ms",
+  "text": "Perut senak, mntah 2 kali",
+  "labels": [
+   "abdominal_pain"
+  ]
+ },
+ {
+  "id": "m021",
+  "lang": "ms",
+  "text": "muntah x berhenti dari subuh, air pun x masuk",
+  "labels": [
+   "persistent_vomiting",
+   "poor_oral_intake"
+  ]
+ },
+ {
+  "id": "m022",
+  "lang": "ms",
+  "text": "mak saya gelisah, cakap merepek2, keliru sikit",
+  "labels": [
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m023",
+  "lang": "ms",
+  "text": "kencing sikit sgt hari ni, warna pekat",
+  "labels": [
+   "low_urine"
+  ]
+ },
+ {
+  "id": "m024",
+  "lang": "ms",
+  "text": "letih sikit je, makan ok minum ok",
+  "labels": []
+ },
+ {
+  "id": "m025",
+  "lang": "ms",
+  "text": "Semalam muntah banyak kali tapi hari ni dah ok",
+  "labels": []
+ },
+ {
+  "id": "m026",
+  "lang": "ms",
+  "text": "hidung berdarah td pagi",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m027",
+  "lang": "ms",
+  "text": "najis hitam mcm tar hari ni",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m028",
+  "lang": "ms",
+  "text": "Pening sgt bila bangun, rasa nak pengsan",
+  "labels": [
+   "fainting"
+  ]
+ },
+ {
+  "id": "m029",
+  "lang": "ms",
+  "text": "anak sy x nak minum langsung, kencing pun sikit",
+  "labels": [
+   "poor_oral_intake",
+   "low_urine"
+  ]
+ },
+ {
+  "id": "m030",
+  "lang": "ms",
+  "text": "sakit kepala je, xde muntah, xde sakit perut",
+  "labels": []
+ },
+ {
+  "id": "m031",
+  "lang": "ms",
+  "text": "period byk sgt bulan ni, tukar pad tiap jam",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m032",
+  "lang": "ms",
+  "text": "kalau muntah lagi saya pergi klinik",
+  "labels": []
+ },
+ {
+  "id": "m033",
+  "lang": "ms",
+  "text": "perut pedih kat kanan atas, sentuh pun sakit",
+  "labels": [
+   "abdominal_pain"
+  ]
+ },
+ {
+  "id": "m034",
+  "lang": "ms",
+  "text": "mengantuk luar biasa, tido je sepanjang hari, susah nak kejut",
+  "labels": [
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m035",
+  "lang": "ms",
+  "text": "dah 8 jam x kencing",
+  "labels": [
+   "low_urine"
+  ]
+ },
+ {
+  "id": "m036",
+  "lang": "ms",
+  "text": "sesak nafas bila baring",
+  "labels": [
+   "breathless"
+  ]
+ },
+ {
+  "id": "m037",
+  "lang": "ms",
+  "text": "kulit pucat, sejuk, berpeluh",
+  "labels": [
+   "cold_clammy"
+  ]
+ },
+ {
+  "id": "m038",
+  "lang": "ms",
+  "text": "berak cair 3 kali hari ni",
+  "labels": []
+ },
+ {
+  "id": "m039",
+  "lang": "ms",
+  "text": "cirit 4x sejak pagi, perut memulas",
+  "labels": [
+   "persistent_diarrhoea",
+   "abdominal_pain"
+  ]
+ },
+ {
+  "id": "m040",
+  "lang": "ms",
+  "text": "muntah ada darah sikit tadi",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m041",
+  "lang": "ms",
+  "text": "x pitam, x pengsan, cuma letih sikit",
+  "labels": []
+ },
+ {
+  "id": "m042",
+  "lang": "ms",
+  "text": "Bdn sakit2, demam naik turun",
+  "labels": []
+ },
+ {
+  "id": "m043",
+  "lang": "ms",
+  "text": "tak sawan dah lepas masuk wad minggu lepas",
+  "labels": []
+ },
+ {
+  "id": "m044",
+  "lang": "ms",
+  "text": "sakit mata, sakit kepala, selera makan kurang",
+  "labels": []
+ },
+ {
+  "id": "m045",
+  "lang": "ms",
+  "text": "Anak sy muntah 5 kali, lembik je, x nak main",
+  "labels": [
+   "persistent_vomiting",
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m046",
+  "lang": "ms",
+  "text": "kencing ada darah, warna merah",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m047",
+  "lang": "ms",
+  "text": "Hari ni rasa segar sikit, dah boleh makan nasi",
+  "labels": []
+ },
+ {
+  "id": "m048",
+  "lang": "ms",
+  "text": "x ada sesak nafas, x ada sakit dada",
+  "labels": []
+ },
+ {
+  "id": "m049",
+  "lang": "ms",
+  "text": "muntah 1 kali je pagi td",
+  "labels": []
+ },
+ {
+  "id": "m050",
+  "lang": "ms",
+  "text": "lebam2 biru ungu keluar kat lengan sendiri",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m051",
+  "lang": "ms",
+  "text": "sakti perut, x boleh minum, kencing sikit, lemah sgt",
+  "labels": [
+   "abdominal_pain",
+   "poor_oral_intake",
+   "low_urine",
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m052",
+  "lang": "ms",
+  "text": "ayah sy tiba2 pengsan dlm bilik air td",
+  "labels": [
+   "fainting"
+  ]
+ },
+ {
+  "id": "m053",
+  "lang": "ms",
+  "text": "dah x cirit birit, berak dah normal",
+  "labels": []
+ },
+ {
+  "id": "m054",
+  "lang": "ms",
+  "text": "gatal2 kat tapak tangan, xde bintik merah",
+  "labels": []
+ },
+ {
+  "id": "m055",
+  "lang": "en",
+  "text": "Still having fever today, headache and body ache",
+  "labels": []
+ },
+ {
+  "id": "m056",
+  "lang": "en",
+  "text": "Vomited 4 times since last night, cant keep anything down",
+  "labels": [
+   "persistent_vomiting",
+   "poor_oral_intake"
+  ]
+ },
+ {
+  "id": "m057",
+  "lang": "en",
+  "text": "Vomited 3 times today but managing to drink a bit",
+  "labels": []
+ },
+ {
+  "id": "m058",
+  "lang": "en",
+  "text": "My gums bleeding when I brush teeth lah",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m059",
+  "lang": "en",
+  "text": "very the tired today, cannot get up from bed at all",
+  "labels": [
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m060",
+  "lang": "en",
+  "text": "a bit tired only, otherwise ok",
+  "labels": []
+ },
+ {
+  "id": "m061",
+  "lang": "en",
+  "text": "No bleeding, no vomiting, just fever",
+  "labels": []
+ },
+ {
+  "id": "m062",
+  "lang": "en",
+  "text": "My son had a fit this morning, very scared",
+  "labels": [
+   "seizure"
+  ]
+ },
+ {
+  "id": "m063",
+  "lang": "en",
+  "text": "Stomach very pain on the rigth side",
+  "labels": [
+   "abdominal_pain"
+  ]
+ },
+ {
+  "id": "m064",
+  "lang": "en",
+  "text": "Diarrhoea 2 times today, not too bad",
+  "labels": []
+ },
+ {
+  "id": "m065",
+  "lang": "en",
+  "text": "Loose stools 6 times since morning",
+  "labels": [
+   "persistent_diarrhoea"
+  ]
+ },
+ {
+  "id": "m066",
+  "lang": "en",
+  "text": "Haven't passed urine since last night, about 10 hours",
+  "labels": [
+   "low_urine"
+  ]
+ },
+ {
+  "id": "m067",
+  "lang": "en",
+  "text": "Hands and feet very cold, skin look pale and clammy",
+  "labels": [
+   "cold_clammy"
+  ]
+ },
+ {
+  "id": "m068",
+  "lang": "en",
+  "text": "Feeling better today, fever gone already",
+  "labels": []
+ },
+ {
+  "id": "m069",
+  "lang": "en",
+  "text": "Very dizzy when I stand up, almost fainted in the toilet",
+  "labels": [
+   "fainting"
+  ]
+ },
+ {
+  "id": "m070",
+  "lang": "en",
+  "text": "Short of breath, hard to breathe when talking",
+  "labels": [
+   "breathless"
+  ]
+ },
+ {
+  "id": "m071",
+  "lang": "en",
+  "text": "My mum is very restless and confused, keep asking same thing",
+  "labels": [
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m072",
+  "lang": "en",
+  "text": "Got red spots on my legs, small small one",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m073",
+  "lang": "en",
+  "text": "Nose bleed twice today",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m074",
+  "lang": "en",
+  "text": "Pain behind the eyes and joint pain, fever 38.9",
+  "labels": []
+ },
+ {
+  "id": "m075",
+  "lang": "en",
+  "text": "Rash all over body but not bleeding, a bit itchy",
+  "labels": []
+ },
+ {
+  "id": "m076",
+  "lang": "en",
+  "text": "Last week got gum bleeding but today none",
+  "labels": []
+ },
+ {
+  "id": "m077",
+  "lang": "en",
+  "text": "Dont have stomach pain anymore",
+  "labels": []
+ },
+ {
+  "id": "m078",
+  "lang": "en",
+  "text": "Cannot drink anything, every time I drink I vomit",
+  "labels": [
+   "poor_oral_intake",
+   "persistent_vomiting"
+  ]
+ },
+ {
+  "id": "m079",
+  "lang": "en",
+  "text": "Black stool this morning, is that normal?",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m080",
+  "lang": "en",
+  "text": "My daughter vomiting non stop and very sleepy, hard to wake her",
+  "labels": [
+   "persistent_vomiting",
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m081",
+  "lang": "en",
+  "text": "Chest tight, cannot breathe properly",
+  "labels": [
+   "breathless"
+  ]
+ },
+ {
+  "id": "m082",
+  "lang": "en",
+  "text": "Very weak cannot stand, cold sweaty skin, urine very little",
+  "labels": [
+   "lethargy",
+   "cold_clammy",
+   "low_urine"
+  ]
+ },
+ {
+  "id": "m083",
+  "lang": "en",
+  "text": "Ok today, only slight headache",
+  "labels": []
+ },
+ {
+  "id": "m084",
+  "lang": "en",
+  "text": "Vomited once after breakfast, now ok already",
+  "labels": []
+ },
+ {
+  "id": "m085",
+  "lang": "en",
+  "text": "No fits, no fainting, just very hot",
+  "labels": []
+ },
+ {
+  "id": "m086",
+  "lang": "en",
+  "text": "Period very heavy this tiem, more than usual",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m087",
+  "lang": "en",
+  "text": "If tummy pain come back I will go hospital",
+  "labels": []
+ },
+ {
+  "id": "m088",
+  "lang": "en",
+  "text": "Tummy cramps and diarrhoea 4 times since morning",
+  "labels": [
+   "abdominal_pain",
+   "persistent_diarrhoea"
+  ]
+ },
+ {
+  "id": "m089",
+  "lang": "en",
+  "text": "my grandma pass out just now, now awake but very drowsy",
+  "labels": [
+   "fainting",
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m090",
+  "lang": "en",
+  "text": "Eating little bit, drinking ok, urine normal",
+  "labels": []
+ },
+ {
+  "id": "m091",
+  "lang": "mixed",
+  "text": "Today rasa ok, demam pun dah kurang",
+  "labels": []
+ },
+ {
+  "id": "m092",
+  "lang": "mixed",
+  "text": "Perut sakit gila, vomit dah 5 times",
+  "labels": [
+   "abdominal_pain",
+   "persistent_vomiting"
+  ]
+ },
+ {
+  "id": "m093",
+  "lang": "mixed",
+  "text": "Muntah 3x je today, can still minum air",
+  "labels": []
+ },
+ {
+  "id": "m094",
+  "lang": "mixed",
+  "text": "Anak saya very lemah, tak boleh bangun, tido je",
+  "labels": [
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m095",
+  "lang": "mixed",
+  "text": "gums berdarah sikit masa brush teeth",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m096",
+  "lang": "mixed",
+  "text": "no muntah today, tapi still demam",
+  "labels": []
+ },
+ {
+  "id": "m097",
+  "lang": "mixed",
+  "text": "Berak cair 5x since pagi, sakit perut",
+  "labels": [
+   "persistent_diarrhoea",
+   "abdominal_pain"
+  ]
+ },
+ {
+  "id": "m098",
+  "lang": "mixed",
+  "text": "berak cair 2x je, ok la",
+  "labels": []
+ },
+ {
+  "id": "m099",
+  "lang": "mixed",
+  "text": "Susah breathe, dada ketat",
+  "labels": [
+   "breathless"
+  ]
+ },
+ {
+  "id": "m100",
+  "lang": "mixed",
+  "text": "tangan kaki sejuk, sweating cold, muka pucat",
+  "labels": [
+   "cold_clammy"
+  ]
+ },
+ {
+  "id": "m101",
+  "lang": "mixed",
+  "text": "Tadi nearly pitam masa stand up",
+  "labels": [
+   "fainting"
+  ]
+ },
+ {
+  "id": "m102",
+  "lang": "mixed",
+  "text": "My mum x boleh minum, everything she drink keluar balik",
+  "labels": [
+   "poor_oral_intake",
+   "persistent_vomiting"
+  ]
+ },
+ {
+  "id": "m103",
+  "lang": "mixed",
+  "text": "Dah 12 hours x pee, risau",
+  "labels": [
+   "low_urine"
+  ]
+ },
+ {
+  "id": "m104",
+  "lang": "mixed",
+  "text": "ada red spots kat lengan, macam bintik merah",
+  "labels": [
+   "bleeding"
+  ]
+ },
+ {
+  "id": "m105",
+  "lang": "mixed",
+  "text": "Headache je, body ache sikit, no other symptoms",
+  "labels": []
+ },
+ {
+  "id": "m106",
+  "lang": "mixed",
+  "text": "no bleeding, no sakit perut, cuma letih sikit",
+  "labels": []
+ },
+ {
+  "id": "m107",
+  "lang": "mixed",
+  "text": "Anak sy kena sawan tadi, now dah tidur",
+  "labels": [
+   "seizure"
+  ]
+ },
+ {
+  "id": "m108",
+  "lang": "mixed",
+  "text": "Sakit kepala and sakit mata, demam masih ada",
+  "labels": []
+ },
+ {
+  "id": "m109",
+  "lang": "mixed",
+  "text": "Semalam pengsan but today ok already",
+  "labels": []
+ },
+ {
+  "id": "m110",
+  "lang": "mixed",
+  "text": "Feel better dah, selera makan dah ada",
+  "labels": []
+ },
+ {
+  "id": "m111",
+  "lang": "mixed",
+  "text": "Perut pedih, muntah darah sikit, very weak, x larat jalan",
+  "labels": [
+   "abdominal_pain",
+   "bleeding",
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m112",
+  "lang": "mixed",
+  "text": "tak cirit dah, tak muntah dah, still letih sikit",
+  "labels": []
+ },
+ {
+  "id": "m113",
+  "lang": "mixed",
+  "text": "urine sikit sgt today, kaler gelap",
+  "labels": [
+   "low_urine"
+  ]
+ },
+ {
+  "id": "m114",
+  "lang": "mixed",
+  "text": "My dad gelisah, keep confused, x kenal orang",
+  "labels": [
+   "lethargy"
+  ]
+ },
+ {
+  "id": "m115",
+  "lang": "mixed",
+  "text": "Rash ada kat badan, gatal, no bleeding",
+  "labels": []
+ },
+ {
+  "id": "m116",
+  "lang": "mixed",
+  "text": "very the sakit perut lah today, vomit 2 times",
+  "labels": [
+   "abdominal_pain"
+  ]
+ },
+ {
+  "id": "m117",
+  "lang": "mixed",
+  "text": "Muntah more than 4 times, can't stop",
+  "labels": [
+   "persistent_vomiting"
+  ]
+ },
+ {
+  "id": "m118",
+  "lang": "mixed",
+  "text": "Breathing ok, x sesak nafas, cuma batuk sikit",
+  "labels": []
+ },
+ {
+  "id": "m119",
+  "lang": "mixed",
+  "text": "Nose berdarah pagi tadi, then pening nak pengsan bila bangun",
+  "labels": [
+   "bleeding",
+   "fainting"
+  ]
+ },
+ {
+  "id": "m120",
+  "lang": "mixed",
+  "text": "Anak sy sejuk tangan kaki, pucat, x nak minum langsung",
+  "labels": [
+   "cold_clammy",
+   "poor_oral_intake"
+  ]
+ }
+]

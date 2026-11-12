@@ -1,0 +1,96 @@
+{
+ "clean": {
+  "n": 10,
+  "hct_ok": 10,
+  "hct_missing": 0,
+  "hct_wrong": 0,
+  "plt_ok": 10,
+  "plt_missing": 0,
+  "plt_wrong": 0,
+  "hb_ok": 9,
+  "hb_missing": 0,
+  "hb_wrong": 1,
+  "wcc_ok": 5,
+  "wcc_missing": 2,
+  "wcc_wrong": 3,
+  "hct_and_plt_both_ok": 10,
+  "silent_wrong_hct_or_plt": 0
+ },
+ "photo": {
+  "n": 10,
+  "hct_ok": 5,
+  "hct_missing": 5,
+  "hct_wrong": 0,
+  "plt_ok": 8,
+  "plt_missing": 2,
+  "plt_wrong": 0,
+  "hb_ok": 7,
+  "hb_missing": 3,
+  "hb_wrong": 0,
+  "wcc_ok": 4,
+  "wcc_missing": 4,
+  "wcc_wrong": 2,
+  "hct_and_plt_both_ok": 3,
+  "silent_wrong_hct_or_plt": 0
+ },
+ "dim": {
+  "n": 10,
+  "hct_ok": 0,
+  "hct_missing": 9,
+  "hct_wrong": 1,
+  "plt_ok": 4,
+  "plt_missing": 3,
+  "plt_wrong": 3,
+  "hb_ok": 2,
+  "hb_missing": 7,
+  "hb_wrong": 1,
+  "wcc_ok": 0,
+  "wcc_missing": 6,
+  "wcc_wrong": 4,
+  "hct_and_plt_both_ok": 0,
+  "silent_wrong_hct_or_plt": 3
+ },
+ "all": {
+  "n": 30,
+  "hct_ok": 15,
+  "hct_missing": 14,
+  "hct_wrong": 1,
+  "plt_ok": 22,
+  "plt_missing": 5,
+  "plt_wrong": 3,
+  "hb_ok": 18,
+  "hb_missing": 10,
+  "hb_wrong": 2,
+  "wcc_ok": 9,
+  "wcc_missing": 12,
+  "wcc_wrong": 9,
+  "hct_and_plt_both_ok": 13,
+  "silent_wrong_hct_or_plt": 3
+ },
+ "median_ms": 379
+}
+eval/slips_test/slip00_clean.jpg hct:ok plt:ok hb:ok wcc:wrong(35 vs 3.5)
+eval/slips_test/slip00_photo.jpg hct:ok plt:ok hb:ok wcc:wrong(3 vs 3.5)
+eval/slips_test/slip00_dim.jpg hct:missing plt:ok hb:wrong(11 vs 11.8) wcc:wrong(3 vs 3.5)
+eval/slips_test/slip01_photo.jpg hct:ok plt:missing hb:ok wcc:missing
+eval/slips_test/slip01_dim.jpg hct:missing plt:missing hb:missing wcc:missing
+eval/slips_test/slip02_clean.jpg hct:ok plt:ok hb:ok wcc:missing
+eval/slips_test/slip02_photo.jpg hct:ok plt:ok hb:missing wcc:missing
+eval/slips_test/slip02_dim.jpg hct:missing plt:ok hb:missing wcc:missing
+eval/slips_test/slip03_clean.jpg hct:ok plt:ok hb:ok wcc:wrong(3 vs 7.3)
+eval/slips_test/slip03_photo.jpg hct:missing plt:ok hb:ok wcc:ok
+eval/slips_test/slip03_dim.jpg hct:missing plt:ok hb:ok wcc:wrong(13 vs 7.3)
+eval/slips_test/slip04_photo.jpg hct:missing plt:ok hb:ok wcc:ok
+eval/slips_test/slip04_dim.jpg hct:missing plt:missing hb:missing wcc:missing
+eval/slips_test/slip05_photo.jpg hct:missing plt:ok hb:missing wcc:missing
+eval/slips_test/slip05_dim.jpg hct:missing plt:ok hb:missing wcc:missing
+eval/slips_test/slip06_dim.jpg hct:wrong(36 vs 43.3) plt:wrong(150 vs 85) hb:missing wcc:wrong(2 vs 4.2)
+eval/slips_test/slip07_clean.jpg hct:ok plt:ok hb:ok wcc:wrong(5 vs 4.5)
+eval/slips_test/slip07_photo.jpg hct:ok plt:missing hb:ok wcc:wrong(4 vs 4.5)
+eval/slips_test/slip07_dim.jpg hct:missing plt:missing hb:missing wcc:missing
+eval/slips_test/slip08_clean.jpg hct:ok plt:ok hb:ok wcc:missing
+eval/slips_test/slip08_photo.jpg hct:missing plt:ok hb:missing wcc:missing
+eval/slips_test/slip08_dim.jpg hct:missing plt:wrong(19 vs 78) hb:missing wcc:missing
+eval/slips_test/slip09_clean.jpg hct:ok plt:ok hb:wrong(16 vs 16.2) wcc:ok
+eval/slips_test/slip09_photo.jpg hct:missing plt:ok hb:ok wcc:ok
+eval/slips_test/slip09_dim.jpg hct:missing plt:wrong(10 vs 38) hb:ok wcc:wrong(2 vs 6.7)

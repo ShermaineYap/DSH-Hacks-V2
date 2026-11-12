@@ -1,0 +1,272 @@
+[
+ {
+  "file": "eval/slips/slip00_clean.jpg",
+  "condition": "clean",
+  "layout": 0,
+  "hct": 34,
+  "plt": 81,
+  "hb": 11.4,
+  "wcc": 6.2
+ },
+ {
+  "file": "eval/slips/slip00_photo.jpg",
+  "condition": "photo",
+  "layout": 0,
+  "hct": 34,
+  "plt": 81,
+  "hb": 11.4,
+  "wcc": 6.2
+ },
+ {
+  "file": "eval/slips/slip00_dim.jpg",
+  "condition": "dim",
+  "layout": 0,
+  "hct": 34,
+  "plt": 81,
+  "hb": 11.4,
+  "wcc": 6.2
+ },
+ {
+  "file": "eval/slips/slip01_clean.jpg",
+  "condition": "clean",
+  "layout": 1,
+  "hct": 38.6,
+  "plt": 227,
+  "hb": 12.5,
+  "wcc": 6.7
+ },
+ {
+  "file": "eval/slips/slip01_photo.jpg",
+  "condition": "photo",
+  "layout": 1,
+  "hct": 38.6,
+  "plt": 227,
+  "hb": 12.5,
+  "wcc": 6.7
+ },
+ {
+  "file": "eval/slips/slip01_dim.jpg",
+  "condition": "dim",
+  "layout": 1,
+  "hct": 38.6,
+  "plt": 227,
+  "hb": 12.5,
+  "wcc": 6.7
+ },
+ {
+  "file": "eval/slips/slip02_clean.jpg",
+  "condition": "clean",
+  "layout": 2,
+  "hct": 35.9,
+  "plt": 214,
+  "hb": 12.3,
+  "wcc": 5
+ },
+ {
+  "file": "eval/slips/slip02_photo.jpg",
+  "condition": "photo",
+  "layout": 2,
+  "hct": 35.9,
+  "plt": 214,
+  "hb": 12.3,
+  "wcc": 5
+ },
+ {
+  "file": "eval/slips/slip02_dim.jpg",
+  "condition": "dim",
+  "layout": 2,
+  "hct": 35.9,
+  "plt": 214,
+  "hb": 12.3,
+  "wcc": 5
+ },
+ {
+  "file": "eval/slips/slip03_clean.jpg",
+  "condition": "clean",
+  "layout": 0,
+  "hct": 42.4,
+  "plt": 74,
+  "hb": 14.1,
+  "wcc": 4.5
+ },
+ {
+  "file": "eval/slips/slip03_photo.jpg",
+  "condition": "photo",
+  "layout": 0,
+  "hct": 42.4,
+  "plt": 74,
+  "hb": 14.1,
+  "wcc": 4.5
+ },
+ {
+  "file": "eval/slips/slip03_dim.jpg",
+  "condition": "dim",
+  "layout": 0,
+  "hct": 42.4,
+  "plt": 74,
+  "hb": 14.1,
+  "wcc": 4.5
+ },
+ {
+  "file": "eval/slips/slip04_clean.jpg",
+  "condition": "clean",
+  "layout": 1,
+  "hct": 44.3,
+  "plt": 99,
+  "hb": 15,
+  "wcc": 5.5
+ },
+ {
+  "file": "eval/slips/slip04_photo.jpg",
+  "condition": "photo",
+  "layout": 1,
+  "hct": 44.3,
+  "plt": 99,
+  "hb": 15,
+  "wcc": 5.5
+ },
+ {
+  "file": "eval/slips/slip04_dim.jpg",
+  "condition": "dim",
+  "layout": 1,
+  "hct": 44.3,
+  "plt": 99,
+  "hb": 15,
+  "wcc": 5.5
+ },
+ {
+  "file": "eval/slips/slip05_clean.jpg",
+  "condition": "clean",
+  "layout": 2,
+  "hct": 35,
+  "plt": 124,
+  "hb": 11.7,
+  "wcc": 2.7
+ },
+ {
+  "file": "eval/slips/slip05_photo.jpg",
+  "condition": "photo",
+  "layout": 2,
+  "hct": 35,
+  "plt": 124,
+  "hb": 11.7,
+  "wcc": 2.7
+ },
+ {
+  "file": "eval/slips/slip05_dim.jpg",
+  "condition": "dim",
+  "layout": 2,
+  "hct": 35,
+  "plt": 124,
+  "hb": 11.7,
+  "wcc": 2.7
+ },
+ {
+  "file": "eval/slips/slip06_clean.jpg",
+  "condition": "clean",
+  "layout": 0,
+  "hct": 35.6,
+  "plt": 181,
+  "hb": 12.4,
+  "wcc": 4.4
+ },
+ {
+  "file": "eval/slips/slip06_photo.jpg",
+  "condition": "photo",
+  "layout": 0,
+  "hct": 35.6,
+  "plt": 181,
+  "hb": 12.4,
+  "wcc": 4.4
+ },
+ {
+  "file": "eval/slips/slip06_dim.jpg",
+  "condition": "dim",
+  "layout": 0,
+  "hct": 35.6,
+  "plt": 181,
+  "hb": 12.4,
+  "wcc": 4.4
+ },
+ {
+  "file": "eval/slips/slip07_clean.jpg",
+  "condition": "clean",
+  "layout": 1,
+  "hct": 41.2,
+  "plt": 61,
+  "hb": 13.7,
+  "wcc": 6.3
+ },
+ {
+  "file": "eval/slips/slip07_photo.jpg",
+  "condition": "photo",
+  "layout": 1,
+  "hct": 41.2,
+  "plt": 61,
+  "hb": 13.7,
+  "wcc": 6.3
+ },
+ {
+  "file": "eval/slips/slip07_dim.jpg",
+  "condition": "dim",
+  "layout": 1,
+  "hct": 41.2,
+  "plt": 61,
+  "hb": 13.7,
+  "wcc": 6.3
+ },
+ {
+  "file": "eval/slips/slip08_clean.jpg",
+  "condition": "clean",
+  "layout": 2,
+  "hct": 45.5,
+  "plt": 137,
+  "hb": 15,
+  "wcc": 3.3
+ },
+ {
+  "file": "eval/slips/slip08_photo.jpg",
+  "condition": "photo",
+  "layout": 2,
+  "hct": 45.5,
+  "plt": 137,
+  "hb": 15,
+  "wcc": 3.3
+ },
+ {
+  "file": "eval/slips/slip08_dim.jpg",
+  "condition": "dim",
+  "layout": 2,
+  "hct": 45.5,
+  "plt": 137,
+  "hb": 15,
+  "wcc": 3.3
+ },
+ {
+  "file": "eval/slips/slip09_clean.jpg",
+  "condition": "clean",
+  "layout": 0,
+  "hct": 38.8,
+  "plt": 127,
+  "hb": 13.1,
+  "wcc": 7.3
+ },
+ {
+  "file": "eval/slips/slip09_photo.jpg",
+  "condition": "photo",
+  "layout": 0,
+  "hct": 38.8,
+  "plt": 127,
+  "hb": 13.1,
+  "wcc": 7.3
+ },
+ {
+  "file": "eval/slips/slip09_dim.jpg",
+  "condition": "dim",
+  "layout": 0,
+  "hct": 38.8,
+  "plt": 127,
+  "hb": 13.1,
+  "wcc": 7.3
+ }
+]
